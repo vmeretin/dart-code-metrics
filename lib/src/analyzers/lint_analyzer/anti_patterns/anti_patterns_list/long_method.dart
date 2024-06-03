@@ -50,10 +50,8 @@ class LongMethod extends Pattern {
                 if (_sourceLinesOfCodeMetricThreshold != null)
                   ...entry.value.metrics
                       .where((metricValue) =>
-                          metricValue.metricsId ==
-                              SourceLinesOfCodeMetric.metricId &&
-                          metricValue.value >
-                              _sourceLinesOfCodeMetricThreshold!)
+                          metricValue.metricsId == SourceLinesOfCodeMetric.metricId &&
+                          metricValue.value > _sourceLinesOfCodeMetricThreshold)
                       .map(
                         (metricValue) => createIssue(
                           pattern: this,

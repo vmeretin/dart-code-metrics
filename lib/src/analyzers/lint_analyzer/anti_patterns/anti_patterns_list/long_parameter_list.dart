@@ -20,8 +20,7 @@ class LongParameterList extends Pattern {
   final int? _numberOfParametersMetricThreshold;
 
   @override
-  Iterable<String> get dependentMetricIds =>
-      [NumberOfParametersMetric.metricId];
+  Iterable<String> get dependentMetricIds => [NumberOfParametersMetric.metricId];
 
   LongParameterList({
     Map<String, Object> patternSettings = const {},
@@ -47,10 +46,8 @@ class LongParameterList extends Pattern {
                 if (_numberOfParametersMetricThreshold != null)
                   ...entry.value.metrics
                       .where((metricValue) =>
-                          metricValue.metricsId ==
-                              NumberOfParametersMetric.metricId &&
-                          metricValue.value >
-                              _numberOfParametersMetricThreshold!)
+                          metricValue.metricsId == NumberOfParametersMetric.metricId &&
+                          metricValue.value > _numberOfParametersMetricThreshold)
                       .map(
                         (metricValue) => createIssue(
                           pattern: this,
@@ -63,8 +60,7 @@ class LongParameterList extends Pattern {
                             functionType: entry.key.type,
                           ),
                           verboseMessage: _compileRecommendationMessage(
-                            maximumArguments:
-                                _numberOfParametersMetricThreshold,
+                            maximumArguments: _numberOfParametersMetricThreshold,
                             functionType: entry.key.type,
                           ),
                         ),
