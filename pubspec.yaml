@@ -19,19 +19,19 @@ dependencies:
   analyzer_plugin: ^0.11.2
   ansicolor: ^2.0.1
   args: ^2.0.0
-  collection: ^1.16.0
+  collection: ^1.19.0
   crypto: ^3.0.0
-  dart_code_metrics_presets: ^2.4.0
+  dart_code_metrics_presets: ^2.14.0
   file: ^7.0.0
   glob: ^2.0.1
   html: ">=0.15.0 <1.0.0"
   http: ^1.1.0
   meta: ^1.7.0
   path: ^1.8.0
-  platform: ^3.1.0 # overridden for lowest versions compatibility
+  platform: ^3.1.5
   pub_updater: ^0.4.0
   source_span: ^1.8.0
-  uuid: ^4.4.0
+  uuid: ^4.4.2
   xml: ">=5.3.0 <7.0.0"
   yaml: ^3.1.0
 
@@ -39,8 +39,8 @@ dev_dependencies:
   coverage: ^1.0.2
   intl: ^0.19.0
   lints: ^4.0.0
-  mocktail: ^1.0.0
-  test: ^1.21.0
+  mocktail: ^1.0.4
+  test: ^1.25.8
 
   # internal package, used only in tests data
   test_lints:
